@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    /** Colors
+
+    **  Primary */
+
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    /** Neutral **/
+
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 15px;
+    /* font-family: 'Big Shoulders Display', cursive; */
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container{
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-radius: 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    -ms-border-radius: 12px;
+    -o-border-radius: 12px;
+    margin: 2rem;
+    overflow: hidden;
+}
+
+.box1{
+    background-color: var(--Bright-orange);
+}
+
+.box2{
+    background-color: var(--Dark-cyan);
+}
+
+.box3{
+    background-color: var(--Very-dark-cyan);
+}
+
+.box{
+    padding: 40px;
+}
+
+.box h2{
+    font-family: 'Big Shoulders Display', cursive;
+    text-transform: uppercase;
+    color: var(--Very-light-gray-background-headings-buttons);
+    font-size: 1.875rem;
+}
+
+.box p{
+    color: var(--Transparent-white-paragraphs);
+    line-height: 1.6;
+}
+
+.box a{
+    text-decoration: none;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    padding: 13px 27px;
+    border-radius: 26px;
+    -webkit-border-radius: 26px;
+    -moz-border-radius: 26px;
+    -ms-border-radius: 26px;
+    -o-border-radius: 26px;
+    margin-top: 60px;
+    display: inline-block;
+    border: 2px solid var(--Very-light-gray-background-headings-buttons);
+    transition: all .4s ease ease-in-out;
+    -webkit-transition: all .4s ease ease-in-out;
+    -moz-transition: all .4s ease ease-in-out;
+    -ms-transition: all .4s ease ease-in-out;
+    -o-transition: all .4s ease ease-in-out;
+}
+
+.box1 a{
+    color: var(--Bright-orange);
+}
+
+.box2 a{
+    color: var(--Dark-cyan);
+}
+
+.box3 a{
+    color: var(--Very-dark-cyan);
+}
+
+.box a:hover{
+    color: var(--Very-light-gray-background-headings-buttons);
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 768px){
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .wrapper{
+        margin: 1rem .5rem;
+    }
+}
+
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
