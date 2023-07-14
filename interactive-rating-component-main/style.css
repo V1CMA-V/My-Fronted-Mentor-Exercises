@@ -1,0 +1,210 @@
+/* DESIGN SYSTEM
+  - Basic document styles (line 10)
+  - Utility classes and shapes (line 38)
+  - Body & section level styles (line 58)
+  - Element level styles (line 86)
+  - Post-submit dynamic content styles (line 144)
+  - Media queries (line 167)
+*/
+
+/* Basic document styles */
+:root {
+  --primary-orange: hsl(25, 97%, 53%);
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --med-grey: hsl(216, 12%, 54%);
+  --med-dark-blue: hsl(213, 19%, 18%);
+  --dark-blue: hsl(216, 12%, 8%);
+}
+html {
+  font-size: 20px;
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+}
+h1 {
+  font-size: 1.4rem;
+  line-height: 1.77rem;
+}
+p {
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+}
+label.bold {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: inherit;
+}
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+legend {
+  visibility: hidden;
+  position: absolute;
+}
+
+/* Utility classes and shapes */
+.bubble {
+  width: 2.4rem;
+  height: 2.4rem;
+  background-color: var(--med-dark-blue);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centered {
+  text-align: center;
+  margin-inline: auto;
+}
+.flex-centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Body & section level styles */
+body {
+  position: relative;
+  background-color: var(--dark-blue);
+  color: var(--light-grey);
+}
+main {
+  width: min(calc(100% - 2.4rem), 20.6rem);
+  background: radial-gradient(
+    98.96% 98.96% at 50% 0%,
+    #232a34 0%,
+    #181e27 100%
+  );
+  padding: 1.6rem;
+  padding-right: 1.95rem;
+  margin-inline: auto;
+  position: relative;
+  transform: translateY(47%);
+  border-radius: 1.5rem;
+}
+#headline {
+  min-height: 5.9rem;
+  margin-bottom: 0.4rem;
+}
+#message {
+  min-height: 3.1rem;
+  margin-bottom: 1.35rem;
+}
+#rater {
+  min-height: 6.35rem;
+}
+
+/* Element level styles */
+h1 {
+  margin-top: 1.75rem;
+  color: var(--white);
+}
+.ratings-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.6rem;
+}
+#submit-button {
+  background-color: var(--primary-orange);
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  line-height: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  width: 100%;
+  height: 2.25rem;
+  border: none;
+  border-radius: 1.125rem;
+  margin-top: 0.1rem;
+}
+#submit-button:hover {
+  background-color: var(--white);
+  color: var(--primary-orange);
+}
+.ratings-container > .bubble {
+  position: relative;
+}
+.bubble > label {
+  position: absolute;
+  top: 0;
+  left: 40%;
+  transform: translateY(55%);
+  margin: auto;
+  cursor: pointer;
+}
+.bubble > input[type="radio"] {
+  visibility: hidden;
+}
+input,
+.ratings-container .bubble:hover {
+  cursor: pointer;
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+.bubble-selected {
+  color: var(--white);
+  background-color: var(--primary-orange);
+}
+input,
+.ratings-container .bubble-selected:hover {
+  color: var(--white);
+  background-color: var(--primary-orange);
+}
+
+/* Post-submit dynamic content styles */
+.score-message {
+  color: var(--primary-orange);
+  background-color: var(--med-dark-blue);
+  padding-inline: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.1rem;
+  border-radius: 0.8rem;
+}
+.thank-you {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+#headline > img {
+  margin-top: 0.75rem;
+}
+#message.post-submit {
+  margin-bottom: 0.8rem;
+}
+#rater.post-submit {
+  padding-bottom: 0.45rem;
+}
+
+/* Media queries */
+@media (max-width: 375px) {
+  main {
+    padding: 1.2rem;
+    padding-bottom: 1.6rem;
+    border-radius: 0.75rem;
+    margin-inline: auto;
+  }
+  h1 {
+    font-size: 1.2rem;
+  }
+  p {
+    font-size: 0.7rem;
+    line-height: 1.1rem;
+  }
+  #submit-button {
+    font-size: 0.7rem;
+  }
+  .bubble {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
