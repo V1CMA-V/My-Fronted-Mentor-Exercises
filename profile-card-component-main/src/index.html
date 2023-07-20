@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | Profile card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      body{
+        background: url(../images/bg-pattern-bottom.svg) bottom -600px right -150px no-repeat, url(../images/bg-pattern-top.svg) top -500px left -200px no-repeat;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: #ff0000;
+      }
+    </style>
+  </head>
+  <body class="m-0 p-0 box-border  bg-[#19a2ae]">
+    <div
+      class="grid place-content-center min-h-screen font-Kumbh-Sans text-[#6a6f81]"
+    >
+      <main
+        class="hover:scale-110  transition-transform bg-white w-[400px] rounded-xl font-Kumbh-Sans text-[#6a6f81] m-auto relative shadow-black overflow-hidden flex flex-col"
+      >
+        <header class="flex-1" >
+          <img class="w-full" src="../images/bg-pattern-card.svg" alt="">
+        </header>
+        <section class="grid place-content-center border-b-2">
+          <img
+            class="rounded-full w-[100px] h-[100px] border-4 border-white -translate-y-1/2"
+            src="../images/image-victor.jpg"
+            alt="Imgaen-perfil-Victor"
+          />
+          <h1 class="text-[#2d3248] font-bold">
+            Victor Crest <span class="text-[#6a6f81] font-normal">26</span>
+          </h1>
+          <p class="text-center mb-[20px] text-xs">London</p>
+        </section>
+        <footer
+          class="flex flex-row items-center justify-evenly my-[25px] px-10"
+        >
+          <div class="grid grid-cols-1">
+            <p class="text-[#2d3248] font-bold text-center">80K</p>
+            <span class="text-xs text-center">Followers</span>
+          </div>
+          <div class="grid grid-cols-1">
+            <p class="text-[#2d3248] font-bold text-center">803K</p>
+            <span class="text-xs text-center">Likes</span>
+          </div>
+          <div class="grid grid-cols-1">
+            <p class="text-[#2d3248] font-bold text-center">1.4K</p>
+            <span class="text-xs text-center">Photos</span>
+          </div>
+        </footer>
+      </main>
+      </div>
+    </div>
+  </body>
+</html>
